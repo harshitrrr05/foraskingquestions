@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff1f7">
+  <meta name="description" content="A little heart-to-heart, made with courage and care.">
+  <title>A Little Heart-to-Heart 💌</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <div class="floating-hearts" aria-hidden="true"><span>♡</span><span>♥</span><span>♡</span><span>♥</span><span>♡</span></div>
+  <main class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#" id="home-link"><span class="brand-icon">♥</span> little heart-to-heart</a>
+      <span class="private-pill"><span class="dot"></span> made with a little courage</span>
+    </header>
+
+    <!-- PAGE 1: INTRO -->
+    <section class="page hero active" id="page-home">
+      <div class="eyebrow"><span>✦</span> A tiny questionnaire <span>✦</span></div>
+      <h1>Can I ask you<br><em>something?</em></h1>
+      <p class="hero-copy">Nothing scary, promise. Just a few little questions, a little curiosity, and maybe a tiny bit of blush. 💗</p>
+      <div class="hero-stamp"><span>made with</span><strong>♡</strong><span>and courage</span></div>
+      <button class="primary-button" id="start-button">Okay, let's go <span>↓</span></button>
+      <p class="tiny-note">Take your time. Skip anything you don't want to answer.</p>
+    </section>
+
+    <!-- PAGE 2: QUESTIONS -->
+    <section class="page question-page" id="page-questions" aria-labelledby="questions-title">
+      <div class="form-card">
+        <div class="card-top">
+          <div class="mini-icon">💌</div>
+          <div><p class="card-kicker">THE HEART-TO-HEART</p><h2 id="questions-title">Tell me a little about you</h2></div>
+        </div>
+        <div class="progress-row"><span id="progress-label">A fresh start</span><span id="progress-number">0% answered</span></div>
+        <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+        <form id="crush-form">
+          <div class="field">
+            <label for="name">1. What should I call you? <span class="optional">optional</span></label>
+            <input id="name" name="Name" type="text" maxlength="80" placeholder="Your name or nickname…">
+          </div>
+          <fieldset class="field">
+            <legend>2. What's your current relationship status? <span class="optional">optional</span></legend>
+            <div class="choice-grid">
+              <label class="choice"><input type="radio" name="Relationship status" value="Single"><span>Single 💫</span></label>
+              <label class="choice"><input type="radio" name="Relationship status" value="It's complicated"><span>It's complicated 🫠</span></label>
+              <label class="choice"><input type="radio" name="Relationship status" value="Taken"><span>Taken 💕</span></label>
+              <label class="choice"><input type="radio" name="Relationship status" value="Prefer not to say"><span>Secret 🤐</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="field">
+            <legend>3. What's your idea of a perfect hangout?</legend>
+            <div class="choice-grid">
+              <label class="choice"><input type="radio" name="Perfect hangout" value="Long walk and talks"><span>Long walks & talks 🌙</span></label>
+              <label class="choice"><input type="radio" name="Perfect hangout" value="Food date"><span>A food date 🍓</span></label>
+              <label class="choice"><input type="radio" name="Perfect hangout" value="Movie night"><span>Movie night 🎬</span></label>
+              <label class="choice"><input type="radio" name="Perfect hangout" value="Random adventure"><span>Random adventure ✨</span></label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="first-impression">4. What's your first impression of me?</label>
+            <textarea id="first-impression" name="First impression of me" rows="3" maxlength="800" placeholder="Be honest… I can handle it (probably) 😅"></textarea>
+          </div>
+          <fieldset class="field">
+            <legend>5. Do you believe two people can slowly catch feelings?</legend>
+            <div class="choice-grid">
+              <label class="choice"><input type="radio" name="Believe in slow feelings" value="Definitely"><span>Definitely 💗</span></label>
+              <label class="choice"><input type="radio" name="Believe in slow feelings" value="Maybe"><span>Maybe 👀</span></label>
+              <label class="choice"><input type="radio" name="Believe in slow feelings" value="Not sure"><span>Not sure 🫣</span></label>
+              <label class="choice"><input type="radio" name="Believe in slow feelings" value="Not really"><span>Not really 🌷</span></label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="message">6. Anything you've wanted to say to me? <span class="optional">optional</span></label>
+            <textarea id="message" name="Something to say" rows="3" maxlength="1200" placeholder="A thought, a question, or a random little message…"></textarea>
+          </div>
+          <div class="consent"><span class="consent-icon">🔒</span><p><strong>One little note:</strong> when you submit, your answers are sent to the person who made this page. Share only what you're comfortable sharing. No pressure, and no answer is wrong.</p></div>
+          <button class="primary-button submit-button" type="submit" id="submit-button"><span id="submit-label">Send my answers & see surprise</span><span>♡</span></button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          <button class="text-button" type="button" id="back-home">← Back to the beginning</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- PAGE 3: SURPRISE NOTE -->
+    <section class="page note-page" id="page-note" aria-labelledby="note-title">
+      <div class="note-confetti" aria-hidden="true">✦　♡　✧　♥　✧　♡　✦</div>
+      <article class="letter">
+        <div class="letter-seal">♡</div>
+        <p class="card-kicker">A LITTLE NOTE, JUST FOR YOU</p>
+        <h2 id="note-title">Hey, you. <em>💗</em></h2>
+        <div class="letter-rule"><span>✦</span></div>
+        <p>First of all, thank you for taking a little time out of your day to answer these questions. It might have looked like a simple questionnaire, but making it took a tiny bit of courage… and a whole lot of thought about you.</p>
+        <p>Some people have this lovely way of making an ordinary day feel a little brighter without even trying. A small conversation, a random laugh, or just seeing their name pop up can turn into a moment you remember longer than you expected.</p>
+        <p><strong>You have that kind of magic.</strong> And whether you realise it or not, you can make someone smile just by being yourself.</p>
+        <p>I don't want this note to put any pressure on you or make things awkward. You don't owe me a particular answer, a feeling, or a promise. I just wanted to make something sweet, give you a reason to smile, and let you know that you are appreciated more than a normal little message can explain.</p>
+        <p>So keep being your wonderfully-you self. I hope life gives you plenty of reasons to laugh, people who make you feel safe, and little moments that make your heart happy. And if this page managed to make you smile even for a second… then it did exactly what I hoped it would. 🌷</p>
+        <p class="letter-ending">With a little courage, a warm smile,<br>and lots of good wishes, <span>♡</span></p>
+        <div class="letter-footer">this little page was made especially to make you smile</div>
+      </article>
+      <button class="secondary-button" id="restart-button">Read it again ↻</button>
+      <p class="tiny-note" id="delivery-note">Thank you for being here. 💌</p>
+    </section>
+    <footer>one small question at a time <span>♡</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
